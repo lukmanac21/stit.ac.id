@@ -63,10 +63,10 @@
                                             <form class="js-validation-signin" action="<?= site_url('admin/check_login');?>" method="POST">
                                                 <div class="py-3">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control form-control-alt form-control-lg" id="login-username" name="login-username" placeholder="Username">
+                                                        <input type="email" class="form-control form-control-alt form-control-lg" id="login-username" name="email" placeholder="Email">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="password" class="form-control form-control-alt form-control-lg" id="login-password" name="login-password" placeholder="Password">
+                                                        <input type="password" class="form-control form-control-alt form-control-lg" id="login-password" name="password" placeholder="Password">
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="custom-control custom-checkbox">

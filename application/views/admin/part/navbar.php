@@ -24,7 +24,7 @@
                         <div class="dropdown d-inline-block ml-2">
                             <button type="button" class="btn btn-sm btn-dual d-flex align-items-center" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle" src="<?= base_url()?>assets/admin/media/avatars/avatar10.jpg" alt="Header Avatar" style="width: 21px;">
-                                <span class="d-none d-sm-inline-block ml-2">Adam</span>
+                                <span class="d-none d-sm-inline-block ml-2"><?= $this->session->userdata('nama');?></span>
                                 <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block ml-1 mt-1"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-md dropdown-menu-right p-0 border-0" aria-labelledby="page-header-user-dropdown">

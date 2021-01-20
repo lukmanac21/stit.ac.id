@@ -18,7 +18,11 @@
                                 <h2 class="block-title__title">Visi</h2><!-- /.block-title__title -->
                             </div><!-- /.block-title -->
                             <?php foreach($visi as $rvisi){?>
-                            <p class="about-two__text"><?= $rvisi->visi;?></p><!-- /.about-two__text -->
+                                <p class="about-two__text">
+                                    <ul type="circle">
+                                        <li><?= $rvisi->visi;?></li>
+                                    </ul>
+                                </p><!-- /.about-two__text -->
                             <?php } ?>
                         </div><!-- /.about-two__content -->
                     </div><!-- /.col-lg-6 -->
@@ -30,7 +34,13 @@
                             <div class="block-title text-left">
                                 <h2 class="block-title__title">Misi</h2><!-- /.block-title__title -->
                             </div><!-- /.block-title -->
-                            
+                            <?php foreach($misi as $rmisi){?>
+                                <p class="about-two__text">
+                                    <ul type="circle">
+                                        <li><?= $rmisi->misi;?></li>
+                                    </ul>
+                                </p><!-- /.about-two__text -->
+                            <?php } ?>
                         </div><!-- /.about-two__content -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
@@ -41,7 +51,13 @@
                             <div class="block-title text-left">
                                 <h2 class="block-title__title">Tujuan</h2><!-- /.block-title__title -->
                             </div><!-- /.block-title -->
-                            
+                            <?php foreach($tujuan as $rtujuan){?>
+                                <p class="about-two__text">
+                                    <ul type="circle">
+                                        <li><?= $rtujuan->tujuan;?></li>
+                                    </ul>
+                                </p><!-- /.about-two__text -->
+                            <?php } ?>
                         </div><!-- /.about-two__content -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->

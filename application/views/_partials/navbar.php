@@ -45,26 +45,26 @@
                             <li>
                                 <a href="courses.html">Akademik</a>
                                 <ul class="sub-menu">
-                                    <li><a href="courses.html">Informasi</a></li>
-                                    <li><a href="course-details.html">Program Studi</a></li>
-                                    <li><a href="course-details.html">Pesantren</a></li>
+                                    <li><a href="<?= site_url('Akademik/informasi')?>">Informasi</a></li>
+                                    <li><a href="<?= site_url('Akademik/pstudi')?>">Program Studi</a></li>
+                                    <li><a href="<?= site_url('Akademik/pesantren')?>">Pesantren</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
                                 <a href="courses.html">Kemahasiswaan</a>
                                 <ul class="sub-menu">
-                                    <li><a href="courses.html">Kegiatan Mahasiswa</a></li>
-                                    <li><a href="course-details.html">Kolom Mahasiswa</a></li>
+                                    <li><a href="<?= site_url('Kemahasiswaan/kemahasiswa')?>">Kegiatan Mahasiswa</a></li>
+                                    <li><a href="<?= site_url('Kemahasiswaan/komahasiswa')?>">Kolom Mahasiswa</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
-                                <a href="teachers.html">LP2M</a>
+                                <a href="#">LP2M</a>
                                 <ul class="sub-menu">
                                     <li><a href="teachers.html">Kajian Periodik</a></li>
                                     <li><a href="team-details.html">Penelitian</a></li>
                                     <li><a href="become-teacher.html">Pengabdian Masyarakat</a></li>
                                     <li><a href="become-teacher.html">Kolom STITTA</a></li>
-                                    <li><a href="become-teacher.html">E-Journal</a></li>
+                                    <li><a href="<?= site_url('LPPM/jurnal')?>">E-Journal</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>

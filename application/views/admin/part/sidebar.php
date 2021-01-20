@@ -93,14 +93,14 @@
                         <ul class="nav-main">
                             <li class="nav-main-heading">Dashboard</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Dashboard');?>">
                                     <i class="nav-main-link-icon si si-speedometer"></i>
                                     <span class="nav-main-link-name">Dashboard</span>
                                 </a>
                             </li>
                             <li class="nav-main-heading">Home</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/slider/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-photo-video"></i>
                                     <span class="nav-main-link-name">Slider</span>
                                 </a>
@@ -119,17 +119,17 @@
                                 </a>
                                 <ul class="nav-main-submenu">
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_styles.html">
+                                        <a class="nav-main-link" href="<?= site_url('Administrator/Visi/index');?>">
                                             <span class="nav-main-link-name">Visi</span>
                                         </a>
                                     </li>
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_options.html">
+                                        <a class="nav-main-link" href="<?= site_url('Administrator/Misi/index');?>">
                                             <span class="nav-main-link-name">Misi</span>
                                         </a>
                                     </li>
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_forms.html">
+                                        <a class="nav-main-link" href="<?= site_url('Administrator/Tujuan/index');?>">
                                             <span class="nav-main-link-name">Tujuan</span>
                                         </a>
                                     </li>
@@ -172,7 +172,7 @@
                             </li>
                             <li class="nav-main-heading">Akademik</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Informasi/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-info"></i>
                                     <span class="nav-main-link-name">Informasi</span>
                                 </a>
@@ -228,7 +228,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Jurnal/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-journal-whills"></i>
                                     <span class="nav-main-link-name">E-Journal</span>
                                 </a>

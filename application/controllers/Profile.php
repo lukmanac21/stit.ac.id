@@ -5,11 +5,12 @@ class Profile extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('Profile_model','prm');
-		$this->load->helper('text');
 	}
 	public function visimisi()
 	{
 		$data['visi'] = $this->prm->get_data_visi();
+		$data['misi'] = $this->prm->get_data_misi();
+		$data['tujuan'] = $this->prm->get_data_tujuan();
 		$this->load->view('visimisi',$data);
     }
     public function lambang()
@@ -18,11 +19,13 @@ class Profile extends CI_Controller {
     }
     public function dosen()
 	{
-		$this->load->view('dosen');
+		$data['dosen'] = $this->prm->get_data_dosen();
+		$this->load->view('dosen',$data);
     }
     public function staff()
 	{
-		$this->load->view('staff');
+		$data['staff'] = $this->prm->get_data_staff();
+		$this->load->view('staff',$data);
     }
     public function pembangunan()
 	{

@@ -21,12 +21,17 @@
     <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url()?>assets/admin/media/favicons/favicon-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url()?>assets/admin/media/favicons/apple-touch-icon-180x180.png">
     <!-- END Icons -->
-
+    <!-- Data Table -->
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/js/plugins/datatables/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css">
+    <!-- END Data Table -->
     <!-- Stylesheets -->
     <!-- Fonts and OneUI framework -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" id="css-main" href="<?= base_url()?>assets/admin/css/oneui.min.css">
-
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/js/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/js/plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/js/plugins/simplemde/simplemde.min.css">
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="<?= base_url()?>assets/admin/css/themes/amethyst.min.css"> -->
     <!-- END Stylesheets -->
