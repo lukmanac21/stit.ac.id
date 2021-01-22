@@ -14,7 +14,7 @@
                         <div class="content content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
-                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Informasi</h1>
+                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">pstudi</h1>
                                 </div>
                             </div>
                         </div>
@@ -26,13 +26,13 @@
                 <div class="content">
                 <div class="block block-rounded">
                         <div class="block-header">
-                            <h3 class="block-title">Data <small>Informasi</small></h3>
+                            <h3 class="block-title">Data <small>pstudi</small></h3>
                         </div>
                         <div class="block-content block-content-full">
                         <div class="block block-rounded">
                                 <ul class="nav nav-tabs nav-tabs-block" data-toggle="tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#btabs-animated-slideup-home">Data Informasi</a>
+                                        <a class="nav-link active" href="#btabs-animated-slideup-home">Data pstudi</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#btabs-animated-slideup-profile">Tambah Data</a>
@@ -44,29 +44,29 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Judul</th>
+                                                <th>Jurusan</th>
                                                 <th>Uraian</th>
                                                 <th style="width: 15%;">Aksi</th>
                                             </tr>
                                         </thead>
-                                        <?php $no=1; foreach($informasi as $rinformasi){?>
+                                        <?php $no=1; foreach($pstudi as $rpstudi){?>
                                         <tbody>
                                             <tr>
                                             <td class="font-w600 font-size-sm">
                                                     <?= $no;?>
                                                 </td>
                                                 <td class="font-w600 font-size-sm">
-                                                    <?= $rinformasi->judul?>
+                                                    <?= $rpstudi->jurusan?>
                                                 </td>
                                                 <td class="font-w600 font-size-sm">
-                                                    <?= $rinformasi->uraian?>
+                                                    <?= $rpstudi->uraian?>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal tooltip" data-target="#modal-block-fadein" title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rinformasi->id?>" title="Delete">
+                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rpstudi->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>
                                                     </div>
@@ -76,8 +76,8 @@
                                         <?php $no++; }?>
                                     </table> 
                                     </div>
-                                    <?php foreach($informasi as $rinformasi){?>
-                                        <div class="modal fade" id="delete<?= $rinformasi->id?>" tabindex="-1" role="dialog" aria-labelledby="modal-block-fadein" aria-hidden="true">
+                                    <?php foreach($pstudi as $rpstudi){?>
+                                        <div class="modal fade" id="delete<?= $rpstudi->id?>" tabindex="-1" role="dialog" aria-labelledby="modal-block-fadein" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="block block-rounded block-themed block-transparent mb-0">
@@ -90,9 +90,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="block-content font-size-sm">
-                                                        <form action="<?= site_url('Administrator/Informasi/Delete_data')?>" method="POST">
-                                                            <p>Hapus data <?= $rinformasi->judul?> ?</p>
-                                                            <input type="hidden" name ="id" value="<?= $rinformasi->id?>">
+                                                        <form action="<?= site_url('Administrator/pstudi/Delete_data')?>" method="POST">
+                                                            <p>Hapus data <?= $rpstudi->judul?> ?</p>
+                                                            <input type="hidden" name ="id" value="<?= $rpstudi->id?>">
                                                         </div>
                                                         <div class="block-content block-content-full text-right border-top">
                                                             <button type="button" class="btn btn-alt-primary mr-1" data-dismiss="modal">Close</button>
@@ -105,15 +105,15 @@
                                         </div>
                                     <?php } ?>
                                     <div class="tab-pane fade fade-up" id="btabs-animated-slideup-profile" role="tabpanel">
-                                        <form class="js-validation" action="<?= site_url('Administrator/Informasi/Save_data');?>" method="POST" enctype="multipart/form-data">
+                                        <form class="js-validation" action="<?= site_url('Administrator/pstudi/Save_data');?>" method="POST" enctype="multipart/form-data">
                                             <div class="block block-rounded">
                                                 <div class="block-content block-content-full">
                                                     <!-- Regular -->
                                                     <div class="row items-push">
                                                         <div class="col-lg-12 col-xl-12">
                                                             <div class="form-group">
-                                                                <label for="judul">Judul <span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
+                                                                <label for="jurusan">Jurusan <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="jurusan" name="jurusan" placeholder="jurusan">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 col-xl-12">

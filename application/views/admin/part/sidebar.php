@@ -153,12 +153,12 @@
                                         </a>
                                     </li>
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_options.html">
+                                        <a class="nav-main-link" href="<?= site_url('Administrator/Dosen/index');?>">
                                             <span class="nav-main-link-name">Direktori Dosen</span>
                                         </a>
                                     </li>
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_forms.html">
+                                        <a class="nav-main-link" href="<?= site_url('Administrator/Staff/index');?>">
                                             <span class="nav-main-link-name">Direkstori Staff</span>
                                         </a>
                                     </li>
@@ -178,7 +178,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Pstudi/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-book"></i>
                                     <span class="nav-main-link-name">Program Studi</span>
                                 </a>
@@ -191,7 +191,7 @@
                             </li>
                             <li class="nav-main-heading">Kemahasiswaan</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Kegmahasiswa/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-calendar"></i>
                                     <span class="nav-main-link-name">Kegiatan Mahasiswa</span>
                                 </a>

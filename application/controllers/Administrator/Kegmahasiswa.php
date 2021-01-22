@@ -1,25 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Jurnal extends CI_Controller {
+class kegmahasiswa extends CI_Controller {
 	function __construct(){
 		parent::__construct();
-		$this->load->model('Administrator/Jurnal_model','jrm');
+		$this->load->model('Administrator/kegmahasiswa_model','kgm');
 		$this->load->library('session');
 	}
 	public function index()
 	{
-		$data['kategori'] 		= $this->jrm->get_data_kategori();
-		$data['jurnal'] 		= $this->jrm->get_data_jurnal();
+		$data['kegiatan'] 		= $this->kgm->get_data_kegiatan();
 
-		$this->load->view('Admin/Jurnal/index', $data);
+		$this->load->view('Admin/kegmahasiswa/index', $data);
 	}
 	public function save_data(){
         $data['tanggal'] 		= $this->input->post('tanggal');
-        $data['kategori_id'] 		= $this->input->post('kategori_id');
+        $data['uraian'] 		= $this->input->post('uraian');
         $data['judul'] 			= $this->input->post('judul');
 		$file="";
-        $upload 				= $this->jrm->upload_file_jurnal();
+        $upload 				= $this->kgm->upload_file_kegiatan();
 		if ($upload['result'] == "success") { // Jika proses upload sukses
 			$file = $upload['file']['file_name'];
 			
@@ -27,12 +26,12 @@ class Jurnal extends CI_Controller {
 			$upload['upload_error'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
 		}
 		$data['file'] 			= $file ? $file : '';
-		$this->jrm->insert_data($data);
-		redirect('Administrator/Jurnal/index');
+		$this->kgm->insert_data($data);
+		redirect('Administrator/kegmahasiswa/index');
 	}
 	public function delete_data(){
 		$where['id'] = $this->input->post('id');
-		$this->jrm->delete_data($where);
-		redirect('Administrator/Jurnal/index'); 
+		$this->kgm->delete_data($where);
+		redirect('Administrator/kegmahasiswa/index'); 
 	}
 }

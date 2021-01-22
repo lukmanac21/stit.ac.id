@@ -13,7 +13,8 @@ class Akademik extends CI_Controller {
     }
     public function pstudi()
 	{
-		$this->load->view('pstudi');
+		$data['pstudi']    = $this->akm->get_data_pstudi();
+		$this->load->view('pstudi',$data);
     }
     public function pesantren()
 	{

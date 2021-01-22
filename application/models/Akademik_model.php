@@ -7,5 +7,9 @@ class Akademik_model extends CI_MODEL{
         $query = $this->db->select('*')->from('informasi')->get();
         return $query->result();
     }
+    function get_data_pstudi(){
+        $query = $this->db->select('*')->from('pstudi')->get();
+        return $query->result();
+    }
 }
 ?>

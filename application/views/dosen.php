@@ -16,7 +16,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                         <div class="team-one__single">
                             <div class="team-one__image">
-                                <img src="<?= base_url();?>assets/images/dosen/<?= $rdosen->img?>" alt="" width="90%">
+                                <img src="<?= base_url();?>assets/images/dosen/<?= $rdosen->file?>" alt="" width="90%">
                             </div><!-- /.team-one__image -->
                             <div class="team-one__content">
                                 <h2 class="team-one__name"><a href="#"><?= $rdosen->nama?></a></h2>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2021 at 09:30 AM
+-- Generation Time: Jan 22, 2021 at 03:27 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `dosen` (
   `id` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `img` text NOT NULL,
+  `file` text NOT NULL,
   `matakuliah` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -38,7 +38,7 @@ CREATE TABLE `dosen` (
 -- Dumping data for table `dosen`
 --
 
-INSERT INTO `dosen` (`id`, `nama`, `img`, `matakuliah`) VALUES
+INSERT INTO `dosen` (`id`, `nama`, `file`, `matakuliah`) VALUES
 (1, 'Akhmad Ghasi', 'Akhmad_Ghasi_Pathollah.png', 'Psikologi Pendidikan'),
 (2, 'Ali Wafi ', 'Ali_Wafi.png', 'Manajemen SDM'),
 (3, 'Anis Sulalah', 'Anis_Sulalah.png', 'Manajemen Keuangan'),
@@ -64,8 +64,8 @@ CREATE TABLE `informasi` (
 --
 
 INSERT INTO `informasi` (`id`, `judul`, `uraian`) VALUES
-(1, 'Latar Belakang', 'Kurikulum yang digunakan di Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) Bondowoso pada dua Program Studi telah dirancang dan selalu dievaluasi serta direvisi oleh pihak Kampus STITTA. Kurikulum yang disusun selalu mengacu pada dokumen mutu yang dimiliki Program studi, yaitu Standar Akademik, Kebijakan akademik, Peraturan Akademik, manual Prosedur dan Manual mutu akademik. Kurikulum juga disusun sesuai dengan masukan stake holder internal dan eksternal serta kondisi kekinian, untuk mengikuti perkembangan iptek dan tuntutan stake holder memenuhi dan sangat gayut dengan visi, misi dan tujuan program studi. Untuk memenuhi kompetensi utama dan standar kompetensi sarjana kedokteran hewan dan dokter hewan, harus menempuh minimal 149 sks selama 8 semester. \r\nKurikulum yang dilaksanakan adalah kurikulum berbasis kompetensi yang mengacu standar KKNI, dan mengakomodasi tuntutan dan kebutuhan stake holder yang dimintakan masukannya pada saat lokakarya kurikulum yang bertujuan untuk merevisi kurikulum.\r\n'),
-(2, 'Kebijakan', 'Kebijakan pendidikan dan panduan pendidikan di STITTA Bondowoso dinyatakan di dalam Peraturan Presiden Nomor 8 Tahun 2012 tentang Kerangka Kualifikasi Nasional Indonesia (KKNI) yaitu kerangka penjenjangan kualifikasi kompetensi yang dapat menyandingkan, menyetarakan, dan mengintegrasikan antara bidang pendidikan dan bidang pelatihan kerja serta pengalaman kerja dalam rangka pemberian pengakuan kompetensi kerja sesuai dengan struktur pekerjaan di berbagai sektor (pasal 1 ayat 1). Selanjutnya di dalam pasal 1 ayat 2 peraturan tersebut, CP dinyatakan sebagai kemampuan yang diperoleh melalui internalisasi pengetahuan, sikap, keterampilan, kompetensi, dan akumulasi pengalaman kerja. KKNI pada sistem pendidikan tinggi dinyatakan dalam Undang-Undang Republik Indonesia nomor 12 Tahun 2012 tentang Pendidikan Tinggi yang selanjutnya disingkat UU Dikti 12/2012. Pasal 29 UU Dikti 12/2012 menyatakan bahwa:\r\n1.Kerangka Kualifikasi Nasional merupakan penjenjangan capaian pembelajaran yang menyetarakan luaran bidang pendidikan formal, nonformal, informal, atau pengalaman kerja dalam rangka pengakuan kompetensi kerja sesuai dengan struktur pekerjaan di berbagai sektor.\r\n2.Kerangka Kualifikasi Nasional sebagaimana dimaksud pada ayat (1) menjadi acuan pokok dalam penetapan kompetensi lulusan pendidikan akademik, pendidikan vokasi, dan pendidikan profesi.\r\n3.Penetapan kompetensi lulusan sebagaimana dimaksud pada ayat (2) ditetapkan oleh Menteri.\r\n');
+(5, 'Latar Belakang', '<p style=\"text-align: justify; \">Kurikulum yang digunakan di Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) Bondowoso pada dua Program Studi telah dirancang dan selalu dievaluasi serta direvisi oleh pihak Kampus STITTA. Kurikulum yang disusun selalu mengacu pada dokumen mutu yang dimiliki Program studi, yaitu Standar Akademik, Kebijakan akademik, Peraturan Akademik, manual Prosedur dan Manual mutu akademik. Kurikulum juga disusun sesuai dengan masukan stake holder internal dan eksternal serta kondisi kekinian, untuk mengikuti perkembangan iptek dan tuntutan stake holder memenuhi dan sangat gayut dengan visi, misi dan tujuan program studi. Untuk memenuhi kompetensi utama dan standar kompetensi sarjana kedokteran hewan dan dokter hewan, harus menempuh minimal 149 sks selama 8 semester. Kurikulum yang dilaksanakan adalah kurikulum berbasis kompetensi yang mengacu standar KKNI, dan mengakomodasi tuntutan dan kebutuhan stake holder yang dimintakan masukannya pada saat lokakarya kurikulum yang bertujuan untuk merevisi kurikulum.<br></p>'),
+(6, 'Kebijakan', '<p style=\"text-align: justify; \">Kebijakan pendidikan dan panduan pendidikan di STITTA Bondowoso dinyatakan di dalam Peraturan Presiden Nomor 8 Tahun 2012 tentang Kerangka Kualifikasi Nasional Indonesia (KKNI) yaitu kerangka penjenjangan kualifikasi kompetensi yang dapat menyandingkan, menyetarakan, dan mengintegrasikan antara bidang pendidikan dan bidang pelatihan kerja serta pengalaman kerja dalam rangka pemberian pengakuan kompetensi kerja sesuai dengan struktur pekerjaan di berbagai sektor (pasal 1 ayat 1). Selanjutnya di dalam pasal 1 ayat 2 peraturan tersebut, CP dinyatakan sebagai kemampuan yang diperoleh melalui internalisasi pengetahuan, sikap, keterampilan, kompetensi, dan akumulasi pengalaman kerja. KKNI pada sistem pendidikan tinggi dinyatakan dalam Undang-Undang Republik Indonesia nomor 12 Tahun 2012 tentang Pendidikan Tinggi yang selanjutnya disingkat UU Dikti 12/2012. Pasal 29 UU Dikti 12/2012 menyatakan bahwa: 1.Kerangka Kualifikasi Nasional merupakan penjenjangan capaian pembelajaran yang menyetarakan luaran bidang pendidikan formal, nonformal, informal, atau pengalaman kerja dalam rangka pengakuan kompetensi kerja sesuai dengan struktur pekerjaan di berbagai sektor. 2.Kerangka Kualifikasi Nasional sebagaimana dimaksud pada ayat (1) menjadi acuan pokok dalam penetapan kompetensi lulusan pendidikan akademik, pendidikan vokasi, dan pendidikan profesi. 3.Penetapan kompetensi lulusan sebagaimana dimaksud pada ayat (2) ditetapkan oleh Menteri.<br></p>');
 
 -- --------------------------------------------------------
 
@@ -111,6 +111,20 @@ INSERT INTO `kategori_jurnal` (`id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kegiatan`
+--
+
+CREATE TABLE `kegiatan` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `uraian` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `misi`
 --
 
@@ -129,6 +143,25 @@ INSERT INTO `misi` (`id`, `misi`) VALUES
 (3, 'Menyiapkan sumberdaya robbani yang mampu bersinergi dengan masyarakat dalam kehidupan sosial.'),
 (4, 'Membentuk kepribadian muslim yang beriman, bertaqwa, berdaya, bermartabat, berakhlak mulia dan berkebangsaan.'),
 (5, 'Membangun kepercayaan dan mengembangkan kerjasama dengan berbagai pihak untuk meningkatkan kualitas pelaksanaan Tridharma perguruan tinggi.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pstudi`
+--
+
+CREATE TABLE `pstudi` (
+  `id` int(11) NOT NULL,
+  `jurusan` varchar(255) NOT NULL,
+  `uraian` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pstudi`
+--
+
+INSERT INTO `pstudi` (`id`, `jurusan`, `uraian`) VALUES
+(4, 'Manajemen Pendidikan Islam', '<p style=\"text-align: justify; \">Program Studi Manajemen Pendidikan Islam (MPI) berada dibawah strutur Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA), sedangkan STIT TA berada dibawah naungan Yayasan Pondok Pesantren Manbaul Ulum Tangsil Weyan Wonosari Bondowoso Jawa Timur. Hal ini dapat dikatakan bahwa sebagai salah satu dari penyelenggaraan Pendidikan Tinggi yang telah berdiri kurang lebih 2,5 Tahun. Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) Bondowoso akan berupaya semaksimal mungkin dengan optimis yang berlipat mampu untuk meningkatkan eksistensi dan memajukan perguruan tinggi kedepan.</p><p style=\"text-align: justify; \">Program Studi Manajemen Pendidikan Islam (MPI) Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) berdasarkan SK dari Dirjen Pendis Kemenag RI telah terbit pada tanggal 10 Mei 2017 dengan Nomor SK 2647. Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) telah berjalan dengan penuh keyakinan animo masyarakat Bondowoso tertarik dan berminat untuk melanjutkan jenjang pendidikan ke Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) .pada tahun 2019 secara keseluruhan jumlah mahasiswa 77 Mahasiswa. Kedepan Program Studi Manajemen Pendidikan Islam (MPI) Sekolah Tinggi Ilmu Tarbiyah Togo Ambarsari (STITTA) mampu bersaing perguruan tinggi, akademik dan sebagainnya dengan perguruan tinggi lainnya.&nbsp;</p>');
 
 -- --------------------------------------------------------
 
@@ -159,7 +192,7 @@ INSERT INTO `slider` (`id`, `nama`, `keterangan`, `status`) VALUES
 CREATE TABLE `staff` (
   `id` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `img` text NOT NULL,
+  `file` text NOT NULL,
   `jabatan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -167,7 +200,7 @@ CREATE TABLE `staff` (
 -- Dumping data for table `staff`
 --
 
-INSERT INTO `staff` (`id`, `nama`, `img`, `jabatan`) VALUES
+INSERT INTO `staff` (`id`, `nama`, `file`, `jabatan`) VALUES
 (1, 'Atiqotul Fitriyah', 'Atiqotul_Fitriyah.png', 'TU'),
 (2, 'Nurur Rahman', 'Nurur_Rahman.png', 'TU'),
 (3, 'Dr. Hasan Sayfullah', 'Dr._Hasan_Sayfullah.png', 'Senat Kampus'),
@@ -262,9 +295,21 @@ ALTER TABLE `kategori_jurnal`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kegiatan`
+--
+ALTER TABLE `kegiatan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `misi`
 --
 ALTER TABLE `misi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pstudi`
+--
+ALTER TABLE `pstudi`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -305,13 +350,13 @@ ALTER TABLE `visi`
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `informasi`
 --
 ALTER TABLE `informasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `jurnal`
@@ -326,10 +371,22 @@ ALTER TABLE `kategori_jurnal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `kegiatan`
+--
+ALTER TABLE `kegiatan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `misi`
 --
 ALTER TABLE `misi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `pstudi`
+--
+ALTER TABLE `pstudi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `slider`
@@ -341,7 +398,7 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tujuan`

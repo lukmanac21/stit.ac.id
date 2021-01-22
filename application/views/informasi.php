@@ -25,9 +25,7 @@ p{
                                 <h2 class="block-title__title"><?= $rinformasi->judul;?></h2><!-- /.block-title__title -->
                             </div><!-- /.block-title -->
                                 <p class="about-two__text">
-                                    <ul type="circle">
-                                        <li><p><?= $rinformasi->uraian;?></p></li>
-                                    </ul>
+                                        <?= $rinformasi->uraian;?>
                                 </p><!-- /.about-two__text -->
                         </div><!-- /.about-two__content -->
                     </div><!-- /.col-lg-6 -->
