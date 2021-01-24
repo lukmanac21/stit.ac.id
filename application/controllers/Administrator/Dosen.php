@@ -29,6 +29,12 @@ class Dosen extends CI_Controller {
         echo $this->db->last_query();
 		// redirect('Administrator/Dosen/index');
 	}
+	public function edit_data($id){
+		$data['dosen'] = $this->dsm->get_edit_data($id);
+		// echo $this->db->last_query();die();
+		$this->load->view('Admin/Dosen/ubah',$data);
+
+	}
 	public function delete_data(){
 		$where['id'] = $this->input->post('id');
 		$this->dsm->delete_data($where);

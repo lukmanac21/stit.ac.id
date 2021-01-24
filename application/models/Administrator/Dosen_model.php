@@ -6,6 +6,10 @@ class Dosen_model extends CI_MODEL{
         $query = $this->db->select('*')->from('dosen')->get();
         return $query->result();
     }
+    function get_edit_data($id){
+        $query = $this->db->select('*')->from('dosen')->where('id',$id)->get();
+        return $query->result();
+    }
     function upload_file_dosen(){
          
         $this->load->library('upload'); // Load librari upload
@@ -33,6 +37,5 @@ class Dosen_model extends CI_MODEL{
         $this->db->where($where);
         $this->db->delete('dosen');
     }
-
 }
 ?>

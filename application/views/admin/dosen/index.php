@@ -63,9 +63,9 @@
                                                 </td>
                                                 <td width="1%" class="text-center">
                                                     <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal tooltip" data-target="#modal-block-fadein" title="Edit">
+                                                        <a href="<?= site_url('Administrator/Dosen/edit_data/'.$rdosen->id);?>" type="button" class="btn btn-sm btn-alt-primary" data-target="#modal-block-fadein" title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
-                                                        </button>
+                                                        </a>
                                                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rdosen->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>
@@ -131,11 +131,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- END Regular -->
-                                                    <!-- Submit -->
                                                     <div class="row items-push">
                                                         <div class="col-lg-4">
-                                                            <button type="submit" class="btn btn-alt-primary">Submit</button>
+                                                            <button type="submit" class="btn btn-alt-primary">Tambah</button>
                                                         </div>
                                                     </div>
                                                     <!-- END Submit -->
