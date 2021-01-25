@@ -19,5 +19,6 @@ class Akademik extends CI_Controller {
     public function pesantren()
 	{
 		$this->load->view('pesantren');
-    }
+	}
+	
 }

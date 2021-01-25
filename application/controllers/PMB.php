@@ -9,10 +9,18 @@ class PMB extends CI_Controller {
 	// }
 	public function Pendaftaran()
 	{
-
 		$this->load->view('pendaftaran');
     }
     public function Simpan(){
         
-    }
+	}
+	public function jadwalpend(){
+		$this->load->view('jadwalpendaf');
+	}
+	public function syaratpend(){
+		$this->load->view('syaratpendaf');
+	}
+	public function pengumuman(){
+		$this->load->view('pengumuman');
+	}
 }

@@ -34,12 +34,12 @@
                                     <li><a href="<?= site_url('profile/lambang');?>">Lambang</a></li>
                                     <li><a href="#">Rektorat dan Staff</a>
                                         <ul class="sub-menu">
-                                            <li><a href="index.html">Struktur Organisasi</a></li>
+                                            <li><a href="<?= site_url('profile/strukturorg');?>">Struktur Organisasi</a></li>
                                             <li><a href="<?= site_url('profile/dosen');?>">Direktori Dosen</a></li>
                                             <li><a href="<?= site_url('profile/staff');?>">Direktori Staff</a></li>
                                         </ul><!-- /.sub-menu -->
                                     </li>
-                                    <li><a href="faq.html">Rencana Pengembangan</a></li>
+                                    <li><a href="<?= site_url('profile/rpengembangan');?>">Rencana Pengembangan</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
@@ -60,28 +60,28 @@
                             <li>
                                 <a href="#">LP2M</a>
                                 <ul class="sub-menu">
-                                    <li><a href="teachers.html">Kajian Periodik</a></li>
-                                    <li><a href="team-details.html">Penelitian</a></li>
-                                    <li><a href="become-teacher.html">Pengabdian Masyarakat</a></li>
-                                    <li><a href="become-teacher.html">Kolom STITTA</a></li>
+                                    <li><a href="<?= site_url('LPPM/kajianperiodik')?>">Kajian Periodik</a></li>
+                                    <li><a href="<?= site_url('LPPM/penelitian')?>">Penelitian</a></li>
+                                    <li><a href="<?= site_url('LPPM/pengabdian')?>">Pengabdian Masyarakat</a></li>
+                                    <li><a href="<?= site_url('LPPM/kostitta')?>">Kolom STITTA</a></li>
                                     <li><a href="<?= site_url('LPPM/jurnal')?>">E-Journal</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
                                 <a href="#">Fasilitas</a>
                                 <ul class="sub-menu">
-                                    <li><a href="news.html">Penunjang Perkuliahan</a></li>
-                                    <li><a href="news-details.html">Pustaka</a></li>
-                                    <li><a href="news-details.html">Kegiatan Intra dan Extra</a></li>
+                                    <li><a href="<?= site_url('Fasilitas/fasilitas')?>">Penunjang Perkuliahan</a></li>
+                                    <li><a href="<?= site_url('Fasilitas/pustaka')?>">Pustaka</a></li>
+                                    <li><a href="<?= site_url('Fasilitas/keginen')?>">Kegiatan Intra dan Extra</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
                                 <a href="#">PMB</a>
                                 <ul class="sub-menu">
-                                    <li><a href="news.html">Jadwal Pendaftaran</a></li>
-                                    <li><a href="news-details.html">Syarat Pendaftaran</a></li>
+                                    <li><a href="<?= site_url('PMB/jadwalpend');?>">Jadwal Pendaftaran</a></li>
+                                    <li><a href="<?= site_url('PMB/syaratpend');?>">Syarat Pendaftaran</a></li>
                                     <li><a href="<?= site_url('PMB/pendaftaran');?>">Formulir Pendaftaran</a></li>
-                                    <li><a href="news-details.html">Pengumuman</a></li>
+                                    <li><a href="<?= site_url('PMB/pengumuman');?>">Pengumuman</a></li>
                                 </ul><!-- /.sub-menu -->
                             </li>
                         </ul>

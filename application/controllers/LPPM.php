@@ -15,4 +15,17 @@ class LPPM extends CI_Controller {
 		$data = file_get_contents ( $file );
 		force_download ( $fileName, $data );
 	}
+	public function kajianperiodik(){
+		$this->load->view('kajianperiodik');
+	}
+	public function penelitian(){
+		$this->load->view('penelitian');
+	}
+	public function pengabdian(){
+		$this->load->view('pmasyarakat');
+	}
+	public function kostitta(){
+		$this->load->view('kolstitta');
+	}
+
 }

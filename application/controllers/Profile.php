@@ -27,8 +27,11 @@ class Profile extends CI_Controller {
 		$data['staff'] = $this->prm->get_data_staff();
 		$this->load->view('staff',$data);
     }
-    public function pembangunan()
+    public function rpengembangan()
 	{
-		$this->load->view('pembangunan');
+		$this->load->view('rpengembangan');
+	}
+	public function strukturorg(){
+		$this->load->view('strukturorg');
 	}
 }
