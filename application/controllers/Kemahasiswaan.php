@@ -8,7 +8,8 @@ class Kemahasiswaan extends CI_Controller {
 	}
 	public function kemahasiswa()
 	{
-		$this->load->view('kemahasiswa');
+		$data['kegiatan'] = $this->kem->get_data_kegiatan();
+		$this->load->view('kemahasiswa',$data);
     }
     public function komahasiswa()
 	{

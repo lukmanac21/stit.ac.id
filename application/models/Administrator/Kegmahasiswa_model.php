@@ -6,6 +6,10 @@ class Kegmahasiswa_model extends CI_MODEL{
         $query = $this->db->select('*')->from('kegiatan')->get();
         return $query->result();
     }
+    function get_edit_data($id){
+        $query = $this->db->select('*')->from('Kegiatan')->where('id',$id)->get();
+        return $query->result();
+    }
     function upload_file_kegiatan(){
          
         $this->load->library('upload'); // Load librari upload
@@ -28,6 +32,10 @@ class Kegmahasiswa_model extends CI_MODEL{
     }
     function insert_data($data){
         $this->db->insert('kegiatan',$data);
+    }
+    function update_data($data,$where){
+        $this->db->where($where);
+        $this->db->update('Kegiatan', $data);
     }
     function delete_data($where){
         $this->db->where($where);

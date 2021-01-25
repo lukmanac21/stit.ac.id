@@ -14,7 +14,7 @@
                         <div class="content content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
-                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Dosen</h1>
+                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Jurnal</h1>
                                 </div>
                             </div>
                         </div>
@@ -26,23 +26,27 @@
                 <div class="content">
                 <div class="block block-rounded">
                         <div class="block-header">
-                            <h3 class="block-title">Data <small>Dosen</small></h3>
+                            <h3 class="block-title">Data <small>Jurnal</small></h3>
                         </div>
-                        <?php foreach($dosen as $rdosen){?>
-                        <form class="js-validation" action="<?= site_url('Administrator/dosen/update_data');?>" method="POST" enctype="multipart/form-data">
+                        <?php foreach($jurnal as $rjurnal){?>
+                        <form class="js-validation" action="<?= site_url('Administrator/Jurnal/update_data');?>" method="POST" enctype="multipart/form-data">
                             <div class="block block-rounded">
                                 <div class="block-content block-content-full">
                                     <!-- Regular -->
                                     <div class="row items-push">
                                         <div class="col-lg-6 col-xl-6">
                                             <div class="form-group">
-                                                <label for="nama">Nama <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" value=<?= $rdosen->nama;?>>
-                                                <input type="hidden" class="form-control" id="id" name="id" value=<?= $rdosen->id;?>>
+                                                <label for="kategori">Kategori <span class="text-danger">*</span></label>
+                                                <select class="form-control" id="kategori" name="kategori_id">
+                                                    <?php foreach ($kategori as $rkategori){?>
+                                                        <option value="<?= $rkategori->id;?>"<?php if($rjurnal->kategori_id == $rkategori->id) echo "selected = 'selected'"?>><?= $rkategori->nama;?></option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
                                             <div class="form-group">
-                                                <label>Gambar  <span class="text-danger">*</span>   </label>
+                                                <label>File  <span class="text-danger">*</span>   </label>
                                                 <div class="custom-file">
+                                                    <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
                                                     <input type="file" name="file" class="custom-file-input" data-toggle="custom-file-input" id="example-file-input-custom" name="example-file-input-custom">
                                                     <label class="custom-file-label" for="example-file-input-custom">Choose file</label>
                                                 </div>
@@ -50,8 +54,13 @@
                                         </div>
                                         <div class="col-lg-6 col-xl-6">
                                             <div class="form-group">
-                                                <label for="matkul">Mata Kuliah <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" id="matkul" name="matkul" placeholder="Mata Kuliah" value="<?= $rdosen->matakuliah?>">
+                                                <label for="judul">Judul <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul File" value="<?= $rjurnal->judul?>">
+                                                <input type="hidden" class="form-control" id="id" name="id" value="<?= $rjurnal->id?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tanggal">Tanggal <span class="text-danger">*</span></label>
+                                                <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal" value="<?= $rjurnal->tanggal?>">
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +68,7 @@
                                     <!-- Submit -->
                                     <div class="row items-push">
                                         <div class="col-lg-4">
-                                            <button type="submit" class="btn btn-alt-primary">Ubah</button>
+                                            <button type="submit" class="btn btn-alt-primary">Submit</button>
                                         </div>
                                     </div>
                                     <!-- END Submit -->

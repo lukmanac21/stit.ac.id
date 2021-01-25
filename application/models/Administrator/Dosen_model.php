@@ -33,6 +33,10 @@ class Dosen_model extends CI_MODEL{
     function insert_data($data){
         $this->db->insert('dosen',$data);
     }
+    function update_data($data,$where){
+        $this->db->where($where);
+        $this->db->update('dosen', $data);
+    }
     function delete_data($where){
         $this->db->where($where);
         $this->db->delete('dosen');

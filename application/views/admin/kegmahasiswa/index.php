@@ -63,9 +63,9 @@
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal tooltip" data-target="#modal-block-fadein" title="Edit">
+                                                        <a href="<?= site_url('Administrator/Kegmahasiswa/edit_data/'.$rkegiatan->id)?>" type="button" class="btn btn-sm btn-alt-primary" title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
-                                                        </button>
+                                                        </a>
                                                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rkegiatan->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>
@@ -113,7 +113,7 @@
                                                         <div class="col-lg-6 col-xl-6">
                                                             <div class="form-group">
                                                                 <label for="tanggal">Tanggal <span class="text-danger">*</span></label>
-                                                                <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Judul File">
+                                                                <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal Kegiatan">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Gambar  <span class="text-danger">*</span>   </label>
@@ -126,8 +126,8 @@
                                                         </div>
                                                         <div class="col-lg-6 col-xl-6">
                                                             <div class="form-group">
-                                                                <label for="judul">Judul <span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul File">
+                                                                <label for="namakeg">Nama Kegiatan <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Nama Kegiatan">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 col-xl-12">

@@ -12,19 +12,21 @@
         <section class="blog-one blog-page">
             <div class="container">
                 <div class="row">
+                <?php foreach($kegiatan as $rkegiatan){?>
                     <div class="col-lg-4">
                         <div class="blog-one__single">
                             <div class="blog-one__image">
-                                <img src="<?= base_url()?>assets/images/blog-1-1.jpg" alt="" witdh="370px;" height="307px">
-                                <a class="blog-one__plus" href="news-details.html"><i class="kipso-icon-plus-symbol"></i>
+                                <img src="<?= base_url()?>assets/images/kegiatan/<?= $rkegiatan->file?>" alt="" witdh="370px;" height="307px">
                                     <!-- /.kipso-icon-plus-symbol --></a>
                             </div><!-- /.blog-one__image -->
                             <div class="blog-one__content text-center">
-                                <h2 class="blog-one__title"><a href="news-details.html">Summer high school journalism camp</a>
-                                </h2><!-- /.blog-one__title -->
+                                <h5><?=  date('d-F-Y ',strtotime($rkegiatan->tanggal))?></h5>
+                                <h4 class="blog-one__title"><a href="<?= site_url('Kemahasiswaan/detail_kegiatan/'.$rkegiatan->id)?>"><?= $rkegiatan->judul?></a>
+                                </h4><!-- /.blog-one__title -->
                             </div><!-- /.blog-one__content -->
                         </div><!-- /.blog-one__single -->
                     </div><!-- /.col-lg-4 -->
+                <?php }?>
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.blog-one blog-page -->

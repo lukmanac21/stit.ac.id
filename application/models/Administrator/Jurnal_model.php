@@ -3,11 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Jurnal_model extends CI_MODEL{
     function get_data_jurnal(){
-        $query = $this->db->select('*')->from('jurnal jr')->join('kategori_jurnal kj','jr.kategori_id = kj.id')->get();
+        $query = $this->db->select('jr.*, kj.nama')->from('jurnal jr')->join('kategori_jurnal kj','jr.kategori_id = kj.id')->get();
         return $query->result();
     }
     function get_data_kategori(){
         $query = $this->db->select('*')->from('kategori_jurnal')->get();
+        return $query->result();
+    }
+    function get_edit_data($id){
+        $query = $this->db->select('*')->from('jurnal')->where('id',$id)->get();
         return $query->result();
     }
     function upload_file_jurnal(){
@@ -32,6 +36,10 @@ class Jurnal_model extends CI_MODEL{
     }
     function insert_data($data){
         $this->db->insert('jurnal',$data);
+    }
+    function update_data($data,$where){
+        $this->db->where($where);
+        $this->db->update('jurnal', $data);
     }
     function delete_data($where){
         $this->db->where($where);
