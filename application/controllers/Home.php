@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
+		$data['berita'] = $this->hmd->get_data_berita();
 		$data['slider'] = $this->hmd->get_data_slider();
 		$this->load->view('home',$data);
 	}

@@ -100,13 +100,13 @@
                             </li>
                             <li class="nav-main-heading">Home</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="<?= site_url('Administrator/slider/index');?>">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Slider/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-photo-video"></i>
                                     <span class="nav-main-link-name">Slider</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Berita/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-newspaper"></i>
                                     <span class="nav-main-link-name">Berita</span>
                                 </a>
@@ -136,7 +136,7 @@
                                 </ul>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Lambang/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-image"></i>
                                     <span class="nav-main-link-name">Lambang</span>
                                 </a>
@@ -148,7 +148,7 @@
                                 </a>
                                 <ul class="nav-main-submenu">
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="be_blocks_styles.html">
+                                        <a class="nav-main-link" href="<?= site_url('Administrator/Strukturorg/index');?>">
                                             <span class="nav-main-link-name">Struktur Organisasi</span>
                                         </a>
                                     </li>
@@ -164,19 +164,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-calendar-alt"></i>
-                                    <span class="nav-main-link-name">Rencana Pengembangan</span>
-                                </a>
-                            </li>
                             <li class="nav-main-heading">Akademik</li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="<?= site_url('Administrator/Informasi/index');?>">
-                                    <i class="nav-main-link-icon fa fa-1x fa-info"></i>
-                                    <span class="nav-main-link-name">Informasi</span>
-                                </a>
-                            </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="<?= site_url('Administrator/Pstudi/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-book"></i>
@@ -184,20 +172,14 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Pesantren/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-mosque"></i>
                                     <span class="nav-main-link-name">Pesantren</span>
                                 </a>
                             </li>
                             <li class="nav-main-heading">Kemahasiswaan</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="<?= site_url('Administrator/Kegmahasiswa/index');?>">
-                                    <i class="nav-main-link-icon fa fa-1x fa-calendar"></i>
-                                    <span class="nav-main-link-name">Kegiatan Mahasiswa</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Kolommhs/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-columns"></i>
                                     <span class="nav-main-link-name">Kolom Mahasiswa</span>
                                 </a>
@@ -254,7 +236,7 @@
                             </li>
                             <li class="nav-main-heading">PMB</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Jadwal/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-calendar"></i>
                                     <span class="nav-main-link-name">Jadwal</span>
                                 </a>
@@ -266,9 +248,9 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Pendaftaran');?>">
                                     <i class="nav-main-link-icon si si-note"></i>
-                                    <span class="nav-main-link-name">Formulir</span>
+                                    <span class="nav-main-link-name">Pendaftaran</span>
                                 </a>
                             </li>
                         </ul>

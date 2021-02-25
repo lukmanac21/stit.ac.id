@@ -7,11 +7,12 @@
 
 <body>
     <div class="preloader"><span></span></div><!-- /.preloader -->
-    <div class="page-wrapper">
+      <div class="page-wrapper">
         <?php $this->load->view('_partials/navbar');?>
         <section class="about-two">
-            <div class="container">
-            </div><!-- /.container -->
+          <div class="container">
+          <img src="<?= base_url();?>assets\images\struktur\chartorg.png">
+          </div><!-- /.container -->
         </section><!-- /.about-two -->
         <?php $this->load->view('_partials/footer');?>
 

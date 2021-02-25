@@ -15,7 +15,8 @@ class Profile extends CI_Controller {
     }
     public function lambang()
 	{
-		$this->load->view('lambang');
+		$data['lambang'] = $this->prm->get_data_lambang();
+		$this->load->view('lambang',$data);
     }
     public function dosen()
 	{
@@ -29,7 +30,10 @@ class Profile extends CI_Controller {
     }
     public function rpengembangan()
 	{
-		$this->load->view('rpengembangan');
+		$data['rpengembangan'] = $this->prm->get_data_rpengembangan();
+		//echo $this->db->last_query();die();
+		$this->load->view('rpengembangan',$data);
+		
 	}
 	public function strukturorg(){
 		$this->load->view('strukturorg');

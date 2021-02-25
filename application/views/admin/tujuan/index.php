@@ -8,7 +8,6 @@
             <main id="main-container">
             <?php $this->load->view('admin/part/navbar');?>
             <?php $this->load->view('admin/part/sidebar');?>
-                <!-- Hero -->
                 <div class="bg-image overflow-hidden" style="background-image: url('<?= base_url()?>assets/admin/media/photos/photo3@2x.jpg');">
                     <div class="bg-primary-dark-op">
                         <div class="content content-full">
@@ -20,9 +19,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- END Hero -->
-
-                <!-- Page Content -->
                 <div class="content">
                 <div class="block block-rounded">
                         <div class="block-header">
@@ -59,9 +55,9 @@
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal tooltip" data-target="#modal-block-fadein" title="Edit">
+                                                        <a href="<?= site_url('Administrator/Tujuan/edit_data/').$rtujuan->id?>" type="button" class="btn btn-sm btn-alt-primary" title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
-                                                        </button>
+                                                        </a>
                                                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rtujuan->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>

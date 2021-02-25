@@ -16,7 +16,17 @@ class Tujuan extends CI_Controller {
         $data['tujuan'] = $this->input->post('tujuan');
         $this->tjm->insert_data($data);
         redirect('Administrator/Tujuan/index');
-    }
+	}
+	public function edit_data($id){
+		$data['tujuan'] = $this->tjm->get_data_tujuan_edit($id);
+		$this->load->view('Admin/Tujuan/ubah',$data);
+	}
+	public function update_data(){
+		$data['tujuan'] = $this->input->post('tujuan');
+		$where['id']	= $this->input->post('id');
+        $this->tjm->update_data($data,$where);
+        redirect('Administrator/Tujuan/index');
+	}
     public function delete_data(){
         $where['id'] = $this->input->post('id');
 		$this->tjm->delete_data($where);

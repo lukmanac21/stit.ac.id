@@ -17,6 +17,16 @@ class Visi extends CI_Controller {
         $this->vsm->insert_data($data);
         redirect('Administrator/Visi/index');
     }
+    public function edit_data($id){
+        $data['visi'] = $this->vsm->get_data_visi_edit($id);
+		$this->load->view('Admin/Visi/ubah',$data);
+    }
+    public function update_data(){
+        $data['visi'] = $this->input->post('visi');
+        $where['id']  = $this->input->post('id');
+        $this->vsm->update_data($data,$where);
+        redirect('Administrator/Visi/index');
+    }
     public function delete_data(){
         $where['id'] = $this->input->post('id');
 		$this->vsm->delete_data($where);

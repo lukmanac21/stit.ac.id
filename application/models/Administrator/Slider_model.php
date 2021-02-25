@@ -3,7 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Slider_model extends CI_MODEL{
     function get_data_slider(){
-        $query = $this->db->select('*')->from('slider')->get();
+        $query = $this->db->select('*')->from('slider')->join('status_slider','slider.status = status_slider.id')->get();
+        return $query->result();
+    }
+    function get_data_slider_edit($id){
+        $query = $this->db->select('*')->from('slider')->join('status_slider','slider.status = status_slider.id')->where('slider.id_slider',$id)->get();
+        return $query->result();
+    }
+    function get_data_slider_status(){
+        $query = $this->db->select('*')->from('status_slider')->get();
         return $query->result();
     }
     function upload_file_slider(){
@@ -32,6 +40,10 @@ class Slider_model extends CI_MODEL{
     function delete_data($where){
         $this->db->where($where);
         $this->db->delete('slider');
+    }
+    function update_data($data,$where){
+        $this->db->where($where);
+        $this->db->update('slider', $data);
     }
 }
 ?>

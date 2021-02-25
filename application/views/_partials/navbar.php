@@ -15,7 +15,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="logo-box clearfix">
                         <a class="navbar-brand" href="index.html">
-                            <img src="<?= base_url()?>assets/images/logo/logo.jpg" class="main-logo" width="128" alt="Awesome Image" />
+                            <img src="<?= base_url();?>assets/images/logo/photo6167814156976237147.png" class="main-logo" width="14%" alt="Awesome Image" />
                         </a>
                         <button class="menu-toggler" data-target=".main-navigation">
                             <span class="kipso-icon-menu"></span>
@@ -43,7 +43,7 @@
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
-                                <a href="courses.html">Akademik</a>
+                                <a href="#">Akademik</a>
                                 <ul class="sub-menu">
                                     <li><a href="<?= site_url('Akademik/informasi')?>">Informasi</a></li>
                                     <li><a href="<?= site_url('Akademik/pstudi')?>">Program Studi</a></li>
@@ -51,7 +51,7 @@
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
-                                <a href="courses.html">Kemahasiswaan</a>
+                                <a href="#">Kemahasiswaan</a>
                                 <ul class="sub-menu">
                                     <li><a href="<?= site_url('Kemahasiswaan/kemahasiswa')?>">Kegiatan Mahasiswa</a></li>
                                     <li><a href="<?= site_url('Kemahasiswaan/komahasiswa')?>">Kolom Mahasiswa</a></li>

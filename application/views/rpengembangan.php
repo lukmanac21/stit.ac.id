@@ -9,10 +9,28 @@
     <div class="preloader"><span></span></div><!-- /.preloader -->
     <div class="page-wrapper">
         <?php $this->load->view('_partials/navbar');?>
-        <section class="about-two">
+        <section class="blog-one blog-page">
             <div class="container">
+                <div class="row">
+                    <?php foreach($rpengembangan as $rrpengembangan){?>
+                    <div class="col-lg-4">
+                        <div class="blog-one__single">
+                            <div class="blog-one__image">
+                                <img src="<?= base_url()?>assets/images/berita/<?= $rrpengembangan->images?>" width="370px" height="307px" alt="">
+                                <a class="blog-one__plus" href="news-details.html"><i class="kipso-icon-plus-symbol"></i>
+                                    <!-- /.kipso-icon-plus-symbol --></a>
+                            </div><!-- /.blog-one__image -->
+                            <div class="blog-one__content text-center">
+                                <h2 class="blog-one__title"><a href="news-details.html"><?= $rrpengembangan->judul?></a>
+                                </h2><!-- /.blog-one__title -->
+                                <a href="<?= site_url('Profile/detail_berita/').$rrpengembangan->id_berita;?>" class="blog-one__link">Read More</a><!-- /.blog-one__link -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <?php } ?>
+                </div><!-- /.row -->
             </div><!-- /.container -->
-        </section><!-- /.about-two -->
+        </section><!-- /.blog-one blog-page -->
         <?php $this->load->view('_partials/footer');?>
 
     </div><!-- /.page-wrapper -->

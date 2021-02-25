@@ -19,6 +19,17 @@ class Pstudi extends CI_Controller {
 		//echo $this->db->last_query();
 		redirect('Administrator/Pstudi/index');
 	}
+	public function edit_data($id){
+		$data['pstudi'] 		= $this->psm->get_data_edit($id);
+		$this->load->view('Admin/Pstudi/ubah',$data);
+	}
+	public function update_data(){
+		$where['id'] 			= $this->input->post('id');
+		$data['jurusan']   		= $this->input->post('jurusan');
+		$data['uraian']   	    = $this->input->post('uraian');
+		$this->psm->update_data($data,$where);
+		redirect('Administrator/Pstudi/index');
+	}
 	public function delete_data(){
 		$where['id'] = $this->input->post('id');
 		$this->psm->delete_data($where);

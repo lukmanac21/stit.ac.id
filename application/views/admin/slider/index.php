@@ -59,13 +59,13 @@
                                                         <img src="<?= base_url()?>assets/images/slider/<?= $rslider->nama?>" width="100px" height="70px" alt="">
                                                 </td>
                                                 <td class="font-w600 font-size-sm">
-                                                    <?php if ($rslider->status == 1) echo "Aktif"; else  echo "Tidak Aktif";?>
+                                                    <?= $rslider->status_slider?>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal tooltip" data-target="#modal-block-fadein" title="Edit">
+                                                        <a href="<?= site_url('Administrator/Slider/edit_data/'.$rslider->id_slider);?>" type="button" class="btn btn-sm btn-alt-primary"  title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
-                                                        </button>
+                                                        </a>
                                                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rslider->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>

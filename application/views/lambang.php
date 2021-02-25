@@ -11,20 +11,18 @@
         <?php $this->load->view('_partials/navbar');?>
         <section class="team-details">
             <div class="container">
+            <?php foreach($lambang as $rlambang){?>
                 <div class="row justify-content-between">
                     <div class="col-lg-5">
                         <div class="team-details__content">
                             <h2 class="team-details__title">Arti Lambang</h2><!-- /.team-details__title -->
-                            <p class="team-details__text">Lorem Ipsum is simply dummy text of the printing and type industry.
-                                Lorem Ipsum has been the standard dummy text ever since the when an unknown was popularised. It
-                                has survived not only five centuries, but also the leap into electronic typesetting remaining
-                                unchanged.</p><!-- /.team-details__text -->
+                            <p class="team-details__text"><?= $rlambang->keterangan;?></p><!-- /.team-details__text -->
                         </div><!-- /.team-details__content -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
                         <div class="team-one__single">
                             <div class="team-one__image">
-                                <img src="<?= base_url();?>assets/images/team-d-1.jpg" alt="">
+                                <img src="<?= base_url();?>assets/images/logo/<?= $rlambang->nama;?>" alt="">
                             </div><!-- /.team-one__image -->
                             <div class="team-one__content">
                                 <h2 class="team-one__name"><a href="team-details.html">Lambang STIT</a></h2>
@@ -33,6 +31,7 @@
                         </div><!-- /.team-one__single -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
+            <?php } ?>
             </div><!-- /.container -->
         </section><!-- /.team-details -->
         <?php $this->load->view('_partials/footer');?>

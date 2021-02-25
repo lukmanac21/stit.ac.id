@@ -168,160 +168,22 @@
                     Terbaru</h2><!-- /.block-title__title -->
                 </div><!-- /.block-title -->
                 <div class="blog-two__carousel owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-1.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Summer high school journalism camp</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-2.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Get a tips to develop a quality education</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-3.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Learn variety of programs and courses</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-1.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Summer high school journalism camp</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-2.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Get a tips to develop a quality education</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-3.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Learn variety of programs and courses</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-1.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Summer high school journalism camp</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-2.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Get a tips to develop a quality education</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/blog-2-3.jpg);">
-                            <div class="blog-two__inner">
-                                <a href="news-details.html" class="blog-two__date">
-                                    <span>25</span>
-                                    Jul
-                                </a><!-- /.blog-two__date -->
-                                <div class="blog-two__meta">
-                                    <a href="#">by Admin</a>
-                                    <a href="#">3 Comments</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3 class="blog-two__title">
-                                    <a href="news-details.html">Learn variety of programs and courses</a>
-                                </h3><!-- /.blog-two__title -->
-                            </div><!-- /.blog-two__inner -->
-                        </div><!-- /.blog-two__single -->
-                    </div><!-- /.item -->
+                    <?php foreach($berita as $rberita){?>
+                        <div class="item">
+                            <div class="blog-two__single" style="background-image: url(<?= base_url()?>assets/images/berita/<?= $rberita->images?>);">
+                                <div class="blog-two__inner">
+                                    <a href="<?= site_url('Home/detail_berita/').$rberita->id_berita?>" class="blog-two__date">
+                                        <span><?= $rberita->tanggal?></span>
+                                    </a><!-- /.blog-two__date -->
+                                    <h3 class="blog-two__title">
+                                        <a href="<?= site_url('Home/detail_berita/').$rberita->id_berita?>"><?= $rberita->judul?></a>
+                                    </h3><!-- /.blog-two__title -->
+                                </div><!-- /.blog-two__inner -->
+                            </div><!-- /.blog-two__single -->
+                        </div><!-- /.item -->
+                    <?php }?>
                 </div><!-- /.blog-two__carousel owl-carousel owl-theme -->
+
             </div><!-- /.container -->
         </section><!-- /.blog-one blog-page -->
         <section class="cta-four">

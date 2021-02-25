@@ -59,9 +59,9 @@
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group">
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal tooltip" data-target="#modal-block-fadein" title="Edit">
+                                                        <a href="<?= site_url('Administrator/Misi/edit_data/').$rmisi->id;?>" type="button" class="btn btn-sm btn-alt-primary" title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
-                                                        </button>
+                                                        </a>
                                                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rmisi->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>
