@@ -23,32 +23,38 @@
                 <!-- END Hero -->
                 <!-- Page Content -->
                 <div class="content">
-                <div class="block block-rounded">
+                    <div class="block block-rounded">
                         <div class="block-header">
-                            <h3 class="block-title">Data <small>pendaftaran</small></h3>
+                            <h3 class="block-title">Data <small>Pendaftaran</small></h3>
                         </div>
+                        <br>
+                        <form class="form-inline" action="<?= site_url('Administrator/Pendaftaran/Cari');?>" id="multiple_select_form" method="POST" enctype="multipart/form-data">
+                                <div style="padding-left:20px;" class="col-lg-6 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="jadwal">Pilih Periode <span class="text-danger">*</span></label>
+                                        <select class="js-select2 form-control" id="jadwal" name="jadwal" style="width: 100%;" data-placeholder="Choose one..">
+                                            <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                            <?php foreach($jadwal as $rjadwal){ ?>
+                                            <option value="<?= $rjadwal->id?>"><?= "Tahun " . $rjadwal->tahun . ' Periode ' . $rjadwal->periode?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <button style="margin-top:22px;" type="submit" class="btn btn-primary">Cari</button>
+                            </form>
                         <div class="block-content block-content-full">
-                        <div class="block block-rounded">
-                                <ul class="nav nav-tabs nav-tabs-block" data-toggle="tabs" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#btabs-animated-slideup-home">Data Pendaftaran</a>
-                                    </li>
-                                </ul>
-                                <div class="block-content tab-content overflow-hidden">
-                                    <div class="tab-pane fade fade-up show active" id="btabs-animated-slideup-home" role="tabpanel">
-                                    <a type="button" class="btn btn-alt-danger">PDF</a>
-                                    <br>
-                                    <br>
-                                    <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama</th>
-                                                <th>Program Studi</th>
-                                                <th style="width: 15%;">Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <?php $no=1; foreach($pendaftaran as $rpendaftaran){?>
+
+                            <table class="table table-bordered table-striped table-vcenter js-dataTable-buttons">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama</th>
+                                        <th>Program Studi</th>
+                                        <th style="width: 15%;">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <?php $no=1; foreach($pendaftaran as $rpendaftaran){?>
                                         <tbody>
                                             <tr>
                                             <td class="font-w600 font-size-sm">
@@ -73,9 +79,9 @@
                                             </tr>
                                         </tbody>
                                         <?php $no++; }?>
-                                    </table> 
-                                    </div>
-                                    <?php foreach($pendaftaran as $rpendaftaran){?>
+                            </table>
+                        </div>
+                        <?php foreach($pendaftaran as $rpendaftaran){?>
                                         <div class="modal fade" id="delete<?= $rpendaftaran->id?>" tabindex="-1" role="dialog" aria-labelledby="modal-block-fadein" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
@@ -90,7 +96,7 @@
                                                         </div>
                                                         <div class="block-content font-size-sm">
                                                         <form action="<?= site_url('Administrator/pendaftaran/Delete_data')?>" method="POST">
-                                                            <p>Hapus data <?= $rpendaftaran->pendaftaran?> ?</p>
+                                                            <p>Hapus data <?= $rpendaftaran->nama?> ?</p>
                                                             <input type="hidden" name ="id" value="<?= $rpendaftaran->id?>">
                                                         </div>
                                                         <div class="block-content block-content-full text-right border-top">
@@ -103,12 +109,7 @@
                                             </div>
                                         </div>
                                     <?php } ?>
-                                </div>
-                            </div>
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
-                        </div>
                     </div>
-                </div>
                 <!-- END Page Content -->
             </main>
             <!-- END Main Container -->

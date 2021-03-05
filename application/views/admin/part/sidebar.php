@@ -166,6 +166,12 @@
                             </li>
                             <li class="nav-main-heading">Akademik</li>
                             <li class="nav-main-item">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Jurusan/index');?>">
+                                    <i class="nav-main-link-icon fa fa-1x fa-columns"></i>
+                                    <span class="nav-main-link-name">Jurusan</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
                                 <a class="nav-main-link" href="<?= site_url('Administrator/Pstudi/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-book"></i>
                                     <span class="nav-main-link-name">Program Studi</span>
@@ -177,61 +183,18 @@
                                     <span class="nav-main-link-name">Pesantren</span>
                                 </a>
                             </li>
-                            <li class="nav-main-heading">Kemahasiswaan</li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="<?= site_url('Administrator/Kolommhs/index');?>">
-                                    <i class="nav-main-link-icon fa fa-1x fa-columns"></i>
-                                    <span class="nav-main-link-name">Kolom Mahasiswa</span>
-                                </a>
-                            </li>
+
                             <li class="nav-main-heading">LP2M</li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-calendar-alt"></i>
-                                    <span class="nav-main-link-name">Kajian Periodik</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Penelitian/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-map-pin"></i>
                                     <span class="nav-main-link-name">Penelitian</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-people-carry"></i>
-                                    <span class="nav-main-link-name">Pengamdian Masyarakat</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-columns"></i>
-                                    <span class="nav-main-link-name">Kolom STITA</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="<?= site_url('Administrator/Jurnal/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-journal-whills"></i>
                                     <span class="nav-main-link-name">E-Journal</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-heading">Fasilitas</li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-calendar"></i>
-                                    <span class="nav-main-link-name">Penunjang Perkuliahan</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-book"></i>
-                                    <span class="nav-main-link-name">Pustaka</span>
-                                </a>
-                            </li>
-                            <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
-                                    <i class="nav-main-link-icon fa fa-1x fa-calendar-alt"></i>
-                                    <span class="nav-main-link-name">Kegiatan Intra dan Extra</span>
                                 </a>
                             </li>
                             <li class="nav-main-heading">PMB</li>
@@ -242,7 +205,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="be_pages_dashboard.html">
+                                <a class="nav-main-link" href="<?= site_url('Administrator/Syarat/index');?>">
                                     <i class="nav-main-link-icon fa fa-1x fa-list"></i>
                                     <span class="nav-main-link-name">Syarat</span>
                                 </a>

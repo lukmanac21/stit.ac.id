@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2021 at 08:55 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Generation Time: Mar 05, 2021 at 05:49 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,6 +35,13 @@ CREATE TABLE `berita` (
   `isi_berita` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `tanggal`, `images`, `judul`, `isi_berita`) VALUES
+(16, '2021-03-24', 'course-1-6.jpg', 'dsdada', '<p>dsadada</p>');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +53,23 @@ CREATE TABLE `detail_kat_berita` (
   `id_kategori` int(11) NOT NULL,
   `id_berita` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `detail_kat_berita`
+--
+
+INSERT INTO `detail_kat_berita` (`id`, `id_kategori`, `id_berita`) VALUES
+(34, 1, 16),
+(35, 2, 16),
+(36, 3, 16),
+(37, 4, 16),
+(38, 5, 16),
+(39, 6, 16),
+(40, 7, 16),
+(41, 8, 16),
+(42, 9, 16),
+(43, 10, 16),
+(44, 11, 16);
 
 -- --------------------------------------------------------
 
@@ -113,7 +137,7 @@ CREATE TABLE `jadwal` (
 --
 
 INSERT INTO `jadwal` (`id`, `tahun`, `periode`, `tgl_mulai`, `tgl_selesai`, `status`) VALUES
-(4, 2020, 231, '2021-02-26', '1970-01-01', 0);
+(4, 2021, 1, '2021-03-02', '2021-08-06', 1);
 
 -- --------------------------------------------------------
 
@@ -129,12 +153,25 @@ CREATE TABLE `jurnal` (
   `file` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `jurnal`
+-- Table structure for table `jurusan`
 --
 
-INSERT INTO `jurnal` (`id`, `kategori_id`, `judul`, `tanggal`, `file`) VALUES
-(1, 2, 'Pengaruh Religiusitas terhadap pembelajaran Agama Islam', '2021-01-20', 'FPPKPN.pdf');
+CREATE TABLE `jurusan` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(11) NOT NULL,
+  `keterangan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `jurusan`
+--
+
+INSERT INTO `jurusan` (`id`, `nama`, `keterangan`) VALUES
+(1, 'PAI', 'PENDIDIKAN AGAMA ISLAM'),
+(2, 'MAI', 'MANAGEMENT AGAMA ISLAM');
 
 -- --------------------------------------------------------
 
@@ -155,7 +192,14 @@ INSERT INTO `kategori` (`id`, `nama`) VALUES
 (1, 'Berita'),
 (2, 'Informasi'),
 (3, 'Rencana Pengembangan'),
-(4, 'Kegiatan Mahasiswa');
+(4, 'Kegiatan Mahasiswa'),
+(5, 'Pengabdian Masyarakat'),
+(6, 'Kegiatan Ekstra dan Intra'),
+(7, 'Kolom Mahasiswa'),
+(8, 'Kolom Stitta'),
+(9, 'Penunjang Perkuliahan'),
+(10, 'Pustaka'),
+(11, 'Kajian Periodik');
 
 -- --------------------------------------------------------
 
@@ -252,6 +296,7 @@ INSERT INTO `misi` (`id`, `misi`) VALUES
 
 CREATE TABLE `pendaftaran` (
   `id` int(11) NOT NULL,
+  `id_jadwal` int(11) NOT NULL,
   `program_studi` varchar(10) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `tempat_lahir` varchar(75) NOT NULL,
@@ -279,6 +324,28 @@ CREATE TABLE `pendaftaran` (
   `no_kk` varchar(50) NOT NULL,
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `penelitian`
+--
+
+CREATE TABLE `penelitian` (
+  `id` int(11) NOT NULL,
+  `kategori_id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `keterangan` text NOT NULL,
+  `file` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `penelitian`
+--
+
+INSERT INTO `penelitian` (`id`, `kategori_id`, `tanggal`, `judul`, `keterangan`, `file`) VALUES
+(3, 1, '2021-03-24', 'dsada', '<p>dadadada</p>', 'about-2-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -395,6 +462,26 @@ INSERT INTO `strukturorg` (`id`, `keterangan`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `syarat`
+--
+
+CREATE TABLE `syarat` (
+  `id` int(11) NOT NULL,
+  `jurusan_id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `syarat`
+--
+
+INSERT INTO `syarat` (`id`, `jurusan_id`, `judul`, `keterangan`) VALUES
+(4, 1, '', '<div>Administrasi :</div><div><br></div><div><ol><li>Beragama Islam</li><li>Warganegara Indonesia</li></ol><p>Umum :</p><ol><li>Baligh</li></ol></div>');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tujuan`
 --
 
@@ -493,6 +580,12 @@ ALTER TABLE `jurnal`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
@@ -535,6 +628,12 @@ ALTER TABLE `pendaftaran`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `penelitian`
+--
+ALTER TABLE `penelitian`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pesantren`
 --
 ALTER TABLE `pesantren`
@@ -571,6 +670,12 @@ ALTER TABLE `strukturorg`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `syarat`
+--
+ALTER TABLE `syarat`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tujuan`
 --
 ALTER TABLE `tujuan`
@@ -596,13 +701,13 @@ ALTER TABLE `visi`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `detail_kat_berita`
 --
 ALTER TABLE `detail_kat_berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `dosen`
@@ -629,10 +734,16 @@ ALTER TABLE `jurnal`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `kategori_jurnal`
@@ -668,7 +779,13 @@ ALTER TABLE `misi`
 -- AUTO_INCREMENT for table `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `penelitian`
+--
+ALTER TABLE `penelitian`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pesantren`
@@ -705,6 +822,12 @@ ALTER TABLE `status_slider`
 --
 ALTER TABLE `strukturorg`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `syarat`
+--
+ALTER TABLE `syarat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tujuan`

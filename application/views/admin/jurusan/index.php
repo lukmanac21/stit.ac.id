@@ -14,7 +14,7 @@
                         <div class="content content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
-                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Jurnal</h1>
+                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">pstudi</h1>
                                 </div>
                             </div>
                         </div>
@@ -26,13 +26,13 @@
                 <div class="content">
                 <div class="block block-rounded">
                         <div class="block-header">
-                            <h3 class="block-title">Data <small>Jurnal</small></h3>
+                            <h3 class="block-title">Data <small>pstudi</small></h3>
                         </div>
                         <div class="block-content block-content-full">
                         <div class="block block-rounded">
                                 <ul class="nav nav-tabs nav-tabs-block" data-toggle="tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#btabs-animated-slideup-home">Data Jurnal</a>
+                                        <a class="nav-link active" href="#btabs-animated-slideup-home">Data Jurusan</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#btabs-animated-slideup-profile">Tambah Data</a>
@@ -43,41 +43,41 @@
                                     <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
                                         <thead>
                                             <tr>
-                                                <th>Kategori</th>
-                                                <th class="d-none d-sm-table-cell" style="width: 30%;">Nama Jurnal</th>
-                                                <th class="d-none d-sm-table-cell" style="width: 15%;">Tanggal Upload</th>
+                                                <th>No</th>
+                                                <th>Jurusan</th>
+                                                <th>Uraian</th>
                                                 <th style="width: 15%;">Aksi</th>
                                             </tr>
                                         </thead>
-                                        <?php foreach($jurnal as $rjurnal){?>
+                                        <?php $no=1; foreach($jurusan as $rjurusan){?>
                                         <tbody>
                                             <tr>
-                                                <td class="font-w600 font-size-sm">
-                                                    <?= $rjurnal->nama?>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell font-size-sm">
-                                                    <?= $rjurnal->judul?>  
+                                            <td class="font-w600 font-size-sm">
+                                                    <?= $no;?>
                                                 </td>
                                                 <td class="font-w600 font-size-sm">
-                                                    <?= $rjurnal->tanggal?>  
+                                                    <?= $rjurusan->nama?>
+                                                </td>
+                                                <td class="font-w600 font-size-sm">
+                                                    <?= $rjurusan->keterangan?>
                                                 </td>
                                                 <td class="text-center">
                                                     <div class="btn-group">
-                                                        <a href="<?= site_url('Administrator/Jurnal/edit_data/'.$rjurnal->id)?>" type="button" class="btn btn-sm btn-alt-primary" title="Edit">
+                                                        <a href="<?= site_url('Administrator/Jurusan/edit_data/').$rjurusan->id;?>" type="button" class="btn btn-sm btn-alt-primary" title="Edit">
                                                             <i class="fa fa-fw fa-pencil-alt"></i>
                                                         </a>
-                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rjurnal->id?>" title="Delete">
+                                                        <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="modal" data-target="#delete<?= $rjurusan->id?>" title="Delete">
                                                             <i class="fa fa-fw fa-times"></i>
                                                         </button>
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
-                                        <?php } ?>
+                                        <?php $no++; }?>
                                     </table> 
                                     </div>
-                                    <?php foreach($jurnal as $rjurnal){?>
-                                        <div class="modal fade" id="delete<?= $rjurnal->id?>" tabindex="-1" role="dialog" aria-labelledby="modal-block-fadein" aria-hidden="true">
+                                    <?php foreach($jurusan as $rjurusan){?>
+                                        <div class="modal fade" id="delete<?= $rjurusan->id?>" tabindex="-1" role="dialog" aria-labelledby="modal-block-fadein" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="block block-rounded block-themed block-transparent mb-0">
@@ -90,9 +90,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="block-content font-size-sm">
-                                                        <form action="<?= site_url('Administrator/Jurnal/Delete_data')?>" method="POST">
-                                                            <p>Hapus data <?= $rjurnal->judul?> ?</p>
-                                                            <input type="hidden" name ="id" value="<?= $rjurnal->id?>">
+                                                        <form action="<?= site_url('Administrator/Jurusan/Delete_data')?>" method="POST">
+                                                            <p>Hapus data <?= $rjurusan->nama?> ?</p>
+                                                            <input type="hidden" name ="id" value="<?= $rjurusan->id?>">
                                                         </div>
                                                         <div class="block-content block-content-full text-right border-top">
                                                             <button type="button" class="btn btn-alt-primary mr-1" data-dismiss="modal">Close</button>
@@ -105,39 +105,23 @@
                                         </div>
                                     <?php } ?>
                                     <div class="tab-pane fade fade-up" id="btabs-animated-slideup-profile" role="tabpanel">
-                                        <form class="js-validation" action="<?= site_url('Administrator/Jurnal/Save_data');?>" method="POST" enctype="multipart/form-data">
+                                        <form class="js-validation" action="<?= site_url('Administrator/Jurusan/Save_data');?>" method="POST" enctype="multipart/form-data">
                                             <div class="block block-rounded">
                                                 <div class="block-content block-content-full">
                                                     <!-- Regular -->
                                                     <div class="row items-push">
                                                         <div class="col-lg-6 col-xl-6">
                                                             <div class="form-group">
-                                                                <label for="kategori">Kategori <span class="text-danger">*</span></label>
-                                                                <select class="form-control" id="kategori" name="kategori_id">
-                                                                    <?php foreach ($kategori as $rkategori){?>
-                                                                        <option value="<?= $rkategori->id;?>"><?= $rkategori->nama;?></option>
-                                                                    <?php } ?>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label>File  <span class="text-danger">*</span>   </label>
-                                                                <div class="custom-file">
-                                                                    <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
-                                                                    <input type="file" name="file" class="custom-file-input" data-toggle="custom-file-input" id="example-file-input-custom" name="example-file-input-custom">
-                                                                    <label class="custom-file-label" for="example-file-input-custom">Choose file</label>
-                                                                </div>
+                                                                <label for="Nama">Jurusan <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Jurusan">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-xl-6">
                                                             <div class="form-group">
-                                                                <label for="judul">Judul <span class="text-danger">*</span></label>
-                                                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul File">
+                                                                <label for="keterangan">Keterangan <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan">
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="tanggal">Tanggal <span class="text-danger">*</span></label>
-                                                                <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Judul File">
-                                                            </div>
-                                                        </div>
+                                                        </div>  
                                                     </div>
                                                     <!-- END Regular -->
                                                     <!-- Submit -->

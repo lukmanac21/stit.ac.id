@@ -11,6 +11,24 @@
         <?php $this->load->view('_partials/navbar');?>
         <section class="about-two">
             <div class="container">
+                <div class="row">
+                    <?php foreach($penelitian as $rpenelitian){?>
+                    <div class="col-lg-4">
+                        <div class="blog-one__single">
+                            <div class="blog-one__image">
+                                <img src="<?= base_url()?>assets/images/penelitian/<?= $rpenelitian->file?>" width="370px" height="307px" alt="">
+                                <a class="blog-one__plus" href="<?= site_url('LPPM/detail_penelitian/').$rpenelitian->id;?>"><i class="kipso-icon-plus-symbol"></i>
+                                    <!-- /.kipso-icon-plus-symbol --></a>
+                            </div><!-- /.blog-one__image -->
+                            <div class="blog-one__content text-center">
+                                <h2 class="blog-one__title"><a href="<?= site_url('LPPM/detail_penelitian/').$rpenelitian->id;?>"><?= $rpenelitian->judul?></a>
+                                </h2><!-- /.blog-one__title -->
+                                <a href="<?= site_url('LPPM/detail_penelitian/').$rpenelitian->id;?>" class="blog-one__link">Read More</a><!-- /.blog-one__link -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <?php } ?>
+                </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.about-two -->
         <?php $this->load->view('_partials/footer');?>

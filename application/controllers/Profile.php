@@ -35,6 +35,11 @@ class Profile extends CI_Controller {
 		$this->load->view('rpengembangan',$data);
 		
 	}
+	public function detail_rpengembangan($id){
+		$data['kategori'] = $this->prm->get_data_kategori();
+		$data['rpengembangan']	= $this->prm->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
 	public function strukturorg(){
 		$this->load->view('strukturorg');
 	}

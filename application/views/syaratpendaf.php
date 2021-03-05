@@ -11,6 +11,20 @@
         <?php $this->load->view('_partials/navbar');?>
         <section class="about-two">
             <div class="container">
+                <div class="row">
+                <?php foreach($syarat as $rsyarat){?>
+                    <div class="col-xl-12">
+                        <div class="about-two__content">
+                        <div class="block-title text-left">
+                            <h1 class="block-title__title"><?= $rsyarat->nama ?></h1>
+                            </div><!-- /.block-title -->
+                                <p class="about-two__text">
+                                <?= $rsyarat->keterangan;?> 
+                                </p><!-- /.about-two__text -->
+                        </div><!-- /.about-two__content -->
+                    </div><!-- /.col-lg-6 -->
+                    <?php } ?>
+                </div>
             </div><!-- /.container -->
         </section><!-- /.about-two -->
         <?php $this->load->view('_partials/footer');?>

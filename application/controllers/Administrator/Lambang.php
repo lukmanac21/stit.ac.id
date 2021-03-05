@@ -35,7 +35,6 @@ class Lambang extends CI_Controller {
 		
 	}
 	public function update_data(){
-		$data['keterangan'] 	= $this->input->post('keterangan');	
 		$images="";
 		$upload 				= $this->lbm->upload_file_lambang();
 		if ($upload['result'] == "success") { // Jika proses upload sukses
@@ -44,7 +43,15 @@ class Lambang extends CI_Controller {
 		} else { // Jika proses upload gagal
 			$upload['upload_error'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
 		}
-		$data['nama'] 			= $images ? $images : '';
+		$file 			= $images ? $images : '';
+		if($file == null){
+			$data['keterangan'] 	= $this->input->post('keterangan');
+		}
+		else{
+			$data['nama'] 			= $file;
+			$data['keterangan'] 	= $this->input->post('keterangan');
+		}
+		
 
 		$where['id'] = $this->input->post('id');
 		$this->lbm->update_data($data,$where);

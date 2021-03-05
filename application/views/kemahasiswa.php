@@ -16,12 +16,12 @@
                     <div class="col-lg-4">
                         <div class="blog-one__single">
                             <div class="blog-one__image">
-                                <img src="<?= base_url()?>assets/images/kegiatan/<?= $rkegiatan->file?>" alt="" witdh="370px;" height="307px">
+                                <img src="<?= base_url()?>assets/images/berita/<?= $rkegiatan->images?>" alt="" witdh="370px;" height="307px">
                                     <!-- /.kipso-icon-plus-symbol --></a>
                             </div><!-- /.blog-one__image -->
                             <div class="blog-one__content text-center">
                                 <h5><?=  date('d-F-Y ',strtotime($rkegiatan->tanggal))?></h5>
-                                <h4 class="blog-one__title"><a href="<?= site_url('Kemahasiswaan/detail_kegiatan/'.$rkegiatan->id)?>"><?= $rkegiatan->judul?></a>
+                                <h4 class="blog-one__title"><a href="<?= site_url('Kemahasiswaan/detail_kegiatan/'.$rkegiatan->id_berita)?>"><?= $rkegiatan->judul?></a>
                                 </h4><!-- /.blog-one__title -->
                             </div><!-- /.blog-one__content -->
                         </div><!-- /.blog-one__single -->

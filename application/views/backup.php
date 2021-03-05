@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">NAMA</label>
-                <input type="text" class="form-control" name="nama" id="exampleFormControlInput1" placeholder="NAMA LENGKAP"  >
+                <input type="text" class="form-control" name="nama" id="exampleFormControlInput1" placeholder="NAMA LENGKAP" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">

@@ -14,12 +14,12 @@ class Jadwal extends CI_Controller{
         $data['tahun']   		= $this->input->post('tahun');
         $data['periode']   	    = $this->input->post('periode');
         $data['tgl_mulai']   	= date("Y-m-d",strtotime($this->input->post('tgl_mulai')));
-        $data['tgl_selesai']   	= date("Y-m-d",strtotime($this->input->post('tgl_akhir')));
+        $data['tgl_selesai']   	= date("Y-m-d",strtotime($this->input->post('tgl_selesai')));
         $data['status']         = '0';
-        //var_dump($data);die();
-		$this->jdm->insert_data($data);
+        var_dump($data);die();
+		//$this->jdm->insert_data($data);
 		//echo $this->db->last_query();
-		redirect('Administrator/Jadwal/index');
+		//redirect('Administrator/Jadwal/index');
     }
     public function edit_data($id){
         $data['jadwal'] = $this->jdm->get_edit_data($id);
@@ -30,7 +30,7 @@ class Jadwal extends CI_Controller{
         $data['tahun']   		= $this->input->post('tahun');
         $data['periode']   	    = $this->input->post('periode');
         $data['tgl_mulai']   	= date("Y-m-d",strtotime($this->input->post('tgl_mulai')));
-        $data['tgl_selesai']   	= date("Y-m-d",strtotime($this->input->post('tgl_akhir')));
+        $data['tgl_selesai']   	= date("Y-m-d",strtotime($this->input->post('tgl_selesai')));
         $data['status']         = $this->input->post('status');
         $this->jdm->update_data($data,$where);
         //echo $this->db->last_query();die();

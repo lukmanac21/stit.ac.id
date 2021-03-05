@@ -20,5 +20,10 @@ class Akademik extends CI_Controller {
 	{
 		$this->load->view('pesantren');
 	}
+	public function detail_berita($id){
+		$data['kategori'] = $this->akm->get_data_kategori();
+		$data['rpengembangan']	= $this->akm->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
 	
 }

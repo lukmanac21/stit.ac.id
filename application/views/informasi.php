@@ -23,13 +23,13 @@ p{
                             <div class="blog-one__single">
                                 <div class="blog-one__image">
                                     <img src="<?= base_url()?>assets/images/berita/<?= $rinformasi->images?>" width="370px" height="307px" alt="">
-                                    <a class="blog-one__plus" href="news-details.html"><i class="kipso-icon-plus-symbol"></i>
+                                    <a class="blog-one__plus" href="<?= site_url('Akademik/detail_berita/').$rinformasi->id_berita;?>l"><i class="kipso-icon-plus-symbol"></i>
                                         <!-- /.kipso-icon-plus-symbol --></a>
                                 </div><!-- /.blog-one__image -->
                                 <div class="blog-one__content text-center">
-                                    <h2 class="blog-one__title"><a href="news-details.html"><?= $rinformasi->judul?></a>
+                                    <h2 class="blog-one__title"><a href="<?= site_url('Akademik/detail_berita/').$rinformasi->id_berita;?>"><?= $rinformasi->judul?></a>
                                     </h2><!-- /.blog-one__title -->
-                                    <a href="<?= site_url('Profile/detail_berita/').$rinformasi->id_berita;?>" class="blog-one__link">Read More</a><!-- /.blog-one__link -->
+                                    <a href="<?= site_url('Akademik/detail_berita/').$rinformasi->id_berita;?>" class="blog-one__link">Read More</a><!-- /.blog-one__link -->
                                 </div><!-- /.blog-one__content -->
                             </div><!-- /.blog-one__single -->
                         </div><!-- /.col-lg-4 -->

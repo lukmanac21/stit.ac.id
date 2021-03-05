@@ -13,4 +13,10 @@ class Home extends CI_Controller {
 		$data['slider'] = $this->hmd->get_data_slider();
 		$this->load->view('home',$data);
 	}
+	public function detail_berita($id){
+		$data['kategori'] = $this->hmd->get_data_kategori();
+		$data['rpengembangan']	= $this->hmd->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
+	
 }

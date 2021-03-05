@@ -16,16 +16,41 @@ class LPPM extends CI_Controller {
 		force_download ( $fileName, $data );
 	}
 	public function kajianperiodik(){
-		$this->load->view('kajianperiodik');
+		$data['kajian'] = $this->lpm->get_data_kajian();
+		$this->load->view('kajianperiodik',$data);
+	}
+	public function detail_kajian($id){
+		$data['kategori'] = $this->lpm->get_data_kategori();
+		$data['rpengembangan']	= $this->lpm->get_data_detail($id);
+		$this->load->view('detail',$data);
 	}
 	public function penelitian(){
-		$this->load->view('penelitian');
+		$data['penelitian'] = $this->lpm->get_data_penelitian();
+		$this->load->view('penelitian',$data);
+	}
+	public function detail_penelitian($id){
+		$data['kategori'] = $this->lpm->get_data_kategori_penelitian();
+		$data['penelitian'] = $this->lpm->get_detail_penelitian($id);
+		$this->load->view('detail_penelitian',$data);
 	}
 	public function pengabdian(){
-		$this->load->view('pmasyarakat');
+		$data['pengabdian'] = $this->lpm->get_data_pengabdian();
+		$this->load->view('pmasyarakat',$data);
 	}
 	public function kostitta(){
-		$this->load->view('kolstitta');
+		$data['kategori'] = $this->lpm->get_data_kategori();
+		$data['kolom'] = $this->lpm->get_data_kolom();
+		$this->load->view('kolstitta',$data);
+	}
+	public function detail_pengabdian($id){
+		$data['kategori'] = $this->lpm->get_data_kategori();
+		$data['rpengembangan']	= $this->lpm->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
+	public function detail_kolom($id){
+		$data['kategori'] = $this->lpm->get_data_kategori();
+		$data['rpengembangan']	= $this->lpm->get_data_detail($id);
+		$this->load->view('detail',$data);
 	}
 
 }

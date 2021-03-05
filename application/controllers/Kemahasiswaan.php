@@ -13,6 +13,17 @@ class Kemahasiswaan extends CI_Controller {
     }
     public function komahasiswa()
 	{
-		$this->load->view('komahasiswa');
-    }
+		$data['kolommhs'] = $this->kem->get_data_kolom();
+		$this->load->view('komahasiswa',$data);
+	}
+	public function detail_kegiatan($id){
+		$data['kategori'] = $this->kem->get_data_kategori();
+		$data['rpengembangan']	= $this->kem->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
+	public function detail_kolommhs($id){
+		$data['kategori'] = $this->kem->get_data_kategori();
+		$data['rpengembangan']	= $this->kem->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
 }

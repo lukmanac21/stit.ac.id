@@ -14,7 +14,7 @@
                         <div class="content content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
-                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Kolom Mahasiswa</h1>
+                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Pstudi</h1>
                                 </div>
                             </div>
                         </div>
@@ -26,23 +26,25 @@
                 <div class="content">
                 <div class="block block-rounded">
                         <div class="block-header">
-                            <h3 class="block-title">Data <small>Kolom Mahasiswa</small></h3>
+                            <h3 class="block-title">Data <small>Program Studi</small></h3>
                         </div>
-                        <?php foreach($kolommhs as $rkolommhs){?>
-                            <form class="js-validation" action="<?= site_url('Administrator/Kolommhs/update_data');?>" method="POST" enctype="multipart/form-data">
+                        <?php foreach($jurusan as $rjurusan){?>
+                            <form class="js-validation" action="<?= site_url('Administrator/Jurusan/update_data');?>" method="POST" enctype="multipart/form-data">
                                 <div class="block block-rounded">
                                     <div class="block-content block-content-full">
                                         <!-- Regular -->
                                         <div class="row items-push">
-                                            <div class="col-lg-12 col-xl-12">
+                                            <div class="col-lg-6 col-xl-6">
                                                 <div class="form-group">
-                                                    <label for="judul">Judul <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control" id="judul" name="judul" placeholder="Jabatan" value="<?= $rkolommhs->judul;?>">
+                                                    <label for="nama">Jurusan <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" value="<?= $rjurusan->nama?>">
+                                                    <input type="hidden" name="id" id="id" value="<?= $rjurusan->id?>">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="keterangan">Keterangan Kolom Mahasiswa <span class="text-danger">*</span></label>
-                                                    <textarea name="keterangan" id="keterangan" class="js-summernote"><?= $rkolommhs->keterangan?></textarea>
-                                                    <input type="hidden" class="form-control" id="id" name="id" value="<?= $rkolommhs->id?>">
+                                            </div>
+                                            <div class="col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                    <label for="keterangan">Keterangan <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan" value="<?= $rjurusan->keterangan?>">
                                                 </div>
                                             </div>
                                         </div>

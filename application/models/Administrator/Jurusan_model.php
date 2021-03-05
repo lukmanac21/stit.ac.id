@@ -13,5 +13,13 @@ class Jurusan_model extends CI_MODEL{
         $this->db->where($where);
         $this->db->delete('jurusan');
     }
+    function get_edit_data($id){
+        $query = $this->db->select('*')->from('jurusan')->where('id =',$id)->get();
+        return $query->result();
+    }
+    function update_data($data,$where){
+        $this->db->where($where);
+        $this->db->update('jurusan', $data);
+    }
 }
 ?>

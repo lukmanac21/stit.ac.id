@@ -8,14 +8,32 @@ class Fasilitas extends CI_Controller {
 	}
 	public function fasilitas()
 	{
-		$this->load->view('fasilitas');
+		$data['fasilitas'] = $this->fsm->get_data_fasilitas();
+		$this->load->view('fasilitas',$data);
     }
     public function pustaka()
 	{
-		$this->load->view('pustaka');
+		$data['pustaka'] = $this->fsm->get_data_pustaka();
+		$this->load->view('pustaka',$data);
     }
     public function keginen()
 	{
-		$this->load->view('keginen');
-    }
+		$data['keginen'] = $this->fsm->get_data_keginen();
+		$this->load->view('keginen',$data);
+	}
+	public function detail_keginen($id){
+		$data['kategori'] = $this->fsm->get_data_kategori();
+		$data['rpengembangan']	= $this->fsm->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
+	public function detail_fasilitas($id){
+		$data['kategori'] = $this->fsm->get_data_kategori();
+		$data['rpengembangan']	= $this->fsm->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
+	public function detail_pustaka($id){
+		$data['kategori'] = $this->fsm->get_data_kategori();
+		$data['rpengembangan']	= $this->fsm->get_data_detail($id);
+		$this->load->view('detail',$data);
+	}
 }

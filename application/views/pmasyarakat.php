@@ -11,6 +11,21 @@
         <?php $this->load->view('_partials/navbar');?>
         <section class="about-two">
             <div class="container">
+            <?php foreach($pengabdian as $rkegiatan){?>
+                    <div class="col-lg-4">
+                        <div class="blog-one__single">
+                            <div class="blog-one__image">
+                                <img src="<?= base_url()?>assets/images/berita/<?= $rkegiatan->images?>" alt="" witdh="370px;" height="307px">
+                                    <!-- /.kipso-icon-plus-symbol --></a>
+                            </div><!-- /.blog-one__image -->
+                            <div class="blog-one__content text-center">
+                                <h5><?=  date('d-F-Y ',strtotime($rkegiatan->tanggal))?></h5>
+                                <h4 class="blog-one__title"><a href="<?= site_url('LPPM/detail_pengabdian/'.$rkegiatan->id_berita)?>"><?= $rkegiatan->judul?></a>
+                                </h4><!-- /.blog-one__title -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                <?php }?>
             </div><!-- /.container -->
         </section><!-- /.about-two -->
         <?php $this->load->view('_partials/footer');?>
